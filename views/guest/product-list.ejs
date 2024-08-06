@@ -1,0 +1,25 @@
+<%- include('../include/header.ejs') %>
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+    <body>
+        <!-- header -->
+        <%- include('../include/nav-bar.ejs') %>
+            <!-- Main content -->
+            <main>
+                <!-- tool bar -->
+                <div class="main_tool-bar">
+                    <div class="main_tool-bar_search">
+                        <input type="text" placeholder="search by name">
+                        <button><i class="material-icons">search</i></button>
+                    </div>
+                    <button class="main_tool-bar_add-product">Add product</button>
+                </div>
+
+                <!-- product table -->
+                <%- include('../include/product-table.ejs') %>
+            </main>
+    </body>
+
+    </html>

@@ -1,0 +1,44 @@
+<%- include('../include/header.ejs') %>
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+    <body>
+        <!-- header -->
+        <%- include('../include/nav-bar.ejs') %>
+            <!-- Main content -->
+            <main>
+                <!-- Add product form -->
+                <div class="main_add-product">
+                    <h3>Add product form</h3>
+                    <form class="main_product-form" method="POST" action="/admin">
+                        <div class="main_product-form_input-field">
+                            <!-- Product name -->
+                            <label>Product name</label>
+                            <input type="text" name="name" id="name">
+                            <!-- Category -->
+                            <label>Category</label>
+                            <input type="text" name="category" id="category">
+                            <!-- Price -->
+                            <label>Price</label>
+                            <input type="number" step="0.01" name="price" id="price">
+                        </div>
+                        <button class="main_product-form_add-button" type="submit">Add</button>
+                    </form>
+                </div>
+
+                <!-- tool bar -->
+                <div class="main_tool-bar">
+                    <div class="main_tool-bar_search">
+                        <input type="text" placeholder="search by name">
+                        <button><i class="material-icons">search</i></button>
+                    </div>
+                    <button class="main_tool-bar_add-product">Add product</button>
+                </div>
+
+                <!-- product table -->
+                <%- include('../include/product-table.ejs') %>
+            </main>
+    </body>
+
+    </html>

@@ -1,0 +1,87 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Header */
+
+.page-header {
+    background: linear-gradient(to bottom right, rgb(230, 230, 230), rgb(255, 255, 255));
+    margin: 0;
+    width: 100%;
+    height: 3rem;
+    box-shadow: 1px 3px 1px rgba(202, 202, 202, 0.5);
+    ;
+}
+
+.page-header_nav-bar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.page-header_nav-bar_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.page-header_nav-bar_logo {
+    margin: 0 1rem;
+}
+
+.page-header_nav-bar_list_item {
+    font-size: 18px;
+    margin: 0 0.5rem;
+}
+
+.page-header_nav-bar_list_item a {
+    text-decoration: none;
+    color: black;
+}
+
+.page-header_nav-bar_list_item a:hover,
+.page-header_nav-bar_list_item a:active,
+.page-header_nav-bar_list_item a.active {
+    color: rgb(64, 0, 255);
+}
+
+.login-wrapper{
+    padding: 10px; /* Adjust padding as needed for border size */
+    background: linear-gradient(to right, #ff0000, #00ff00); /* Replace with your desired gradient */
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.page-header_nav-bar_login{
+    margin: 0 0 0 auto;
+    font-size: 20px;
+    padding: 5px 20px;
+    background: none;
+    border: solid 3px rgb(89, 0, 255);
+    border-radius: 17px;
+}
+
+
+.page-header_nav-bar_signup{
+    margin: 0 20px 0 10px;
+    font-size: 20px;
+    padding: 5px 20px;
+    background: linear-gradient(to bottom right, rgb(89, 0, 255), rgb(0, 255, 89));
+    border-radius: 17px;
+    border: none;
+    color: white;
+}
+
+/* Main content */
+main {
+    padding: 1rem;
+}

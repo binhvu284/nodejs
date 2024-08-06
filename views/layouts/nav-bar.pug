@@ -1,0 +1,29 @@
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{pageTitle}
+    link(rel="icon", href="/src/icon.png", type="image/x-icon")
+    link(rel="stylesheet", href="/css/main.css")
+    block nav-bar-style
+
+  body
+    // header
+    header.page-header
+      nav.page-header_nav-bar
+        .page-header_nav-bar_logo
+          img(src="/src/logo.png", width="150px")
+        ul.page-header_nav-bar_list
+          li.page-header_nav-bar_list_item
+            a(href="/", class = (pageNav === '/' ? 'active' : '')) Home
+          li.page-header_nav-bar_list_item
+            a(href="/product", class = (pageNav === '/product' ? 'active' : '')) Product
+          li.page-header_nav-bar_list_item
+            a(href="/task") Task management
+        
+        // Login sign up
+        button.page-header_nav-bar_login Login
+        button.page-header_nav-bar_signup Sign up
+    block nav-bar

@@ -1,0 +1,42 @@
+extends layouts/nav-bar.pug
+
+block nav-bar-style
+    link(rel="stylesheet", href="/css/product.css")
+    link(rel="icon", href="/src/icon.png", type="image/x-icon")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    
+block nav-bar
+    main
+      // Add product form
+      .main_add-product
+        h3 Add product form PUB VERSION
+        form.main_product-form(method="POST", action="/product")
+          .main_product-form_input-field
+            label Product name
+            input(type="text", name="name", id="name")
+          button.main_product-form_add-button(type="submit") Add
+      // tool bar
+      .main_tool-bar
+        .main_tool-bar_search
+          input(type="text", placeholder="search by name")
+          button
+            i.material-icons search
+        button.main_tool-bar_add-product Add product
+      // product table
+      table.main_table
+        // table header
+        thead.main_table_header
+          tr.main_table_header_row
+            th #
+            th.main_table_header_row_name Name
+            th Category
+            th price
+        // table body
+        tbody.main_table_body
+        each product in prods
+          tr.main_table_body_row
+            td.main_table_body_row_num --
+            td.main_table_body_row_name #{product.name}
+            td.main_table_body_row_category --
+            td.main_table_body_row_price --
+

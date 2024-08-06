@@ -1,0 +1,62 @@
+<%- include('../include/header.ejs') %>
+    <link rel="stylesheet" href="/css/task.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    </head>
+
+    <body>
+        <!-- header -->
+        <%- include('../include/nav-bar.ejs') %>
+
+            <!-- Main content -->
+            <main>
+                <!-- Tool bar -->
+                <div class="tool-bar">
+                    <!-- add new list button -->
+                    <button class="tool-bar_add-list">Add new list</button>
+                    <!-- filter -->
+                    <button class="tool-bar_filter tool-bar_filter_start-date">
+                        Start date
+                        <i class="material-icons">calendar_month</i>
+                    </button>
+
+                    <button class="tool-bar_filter tool-bar_filter_end-date">
+                        End date
+                        <i class="material-icons">calendar_month</i>
+                    </button>
+
+                    <button class="tool-bar_filter">
+                        Status
+                        <i class="material-icons">arrow_drop_down</i>
+                    </button>
+                    <!-- search -->
+                    <input type="text" class="tool-bar_search-input">
+                    <button class="tool-bar_search-button">
+                        <i class="material-icons">search</i>
+                    </button>
+                </div>
+
+                <!-- Task -->
+                <div class="task">
+                    <!-- task header bar -->
+                    <div class="task_header">
+                        <table class="task_header_table">
+                            <thead>
+                                <tr>
+                                    <th>Task name</th>
+                                    <th>Start date</th>
+                                    <th>End date</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+
+                </div>
+
+            </main>
+    </body>
+
+    </html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="icon" href="/src/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="page-header">
+        <nav class="page-header_nav-bar">
+            <div class="page-header_nav-bar_logo"><img src="/src/logo.png" width="150px"></div>
+            <ul class="page-header_nav-bar_list">
+                <li class="page-header_nav-bar_list_item"><a class="" href="/">Home</a></li>
+                <li class="page-header_nav-bar_list_item"><a class="active" href="/product">Product</a></li>
+                <li class="page-header_nav-bar_list_item"><a class="" href="/task">Task management</a></li>
+            </ul>
+
+            <!-- Login sign up -->
+            <button class="page-header_nav-bar_login">Login</button>
+            <button class="page-header_nav-bar_signup">Sign up</button>
+        </nav>
+    </header>
+    <!-- Main content -->
+    <main>
+        <!-- Add product form -->
+        <div class="main_add-product">
+            <h3>Add product form</h3>
+            <form class="main_product-form" method="POST" action="/product">
+                <div class="main_product-form_input-field">
+                    <label>Product name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <button class="main_product-form_add-button" type="submit">Add</button>
+            </form>
+        </div>
+
+        <!-- tool bar -->
+        <div class="main_tool-bar">
+            <div class="main_tool-bar_search">
+                <input type="text" placeholder="search by name">
+                <button><i class="material-icons">search</i></button>
+            </div>
+            <button class="main_tool-bar_add-product">Add product</button>
+        </div>
+
+        <!-- product table -->
+        <table class="main_table">
+            <!-- table header -->
+            <thead class="main_table_header">
+                <tr class="main_table_header_row">
+                    <th>#</th>
+                    <th class="main_table_header_row_name">Name</th>
+                    <th>Category</th>
+                    <th>price</th>
+                </tr>
+            </thead>
+            <!-- table body -->
+            <tbody class="main_table_body">
+                {{#each prods}}
+                <tr class="main_table_body_row">
+                    <td class="main_table_body_row_num">--</td>
+                    <td class="main_table_body_row_name">{{ this.name }}</td>
+                    <td class="main_table_body_row_category">--</td>
+                    <td class="main_table_body_row_price">--</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>

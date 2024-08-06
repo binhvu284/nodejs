@@ -1,0 +1,37 @@
+<table class="main_table">
+    <!-- table header -->
+    <thead class="main_table_header">
+        <tr class="main_table_header_row">
+            <th>#</th>
+            <th class="main_table_header_row_name">Name</th>
+            <th>Category</th>
+            <th>price</th>
+        </tr>
+    </thead>
+    <!-- table body -->
+    <tbody class="main_table_body">
+        <% if(prods.length> 0) { %>
+            <% for(let product of prods) { %>
+                <tr class="main_table_body_row">
+                    <td class="main_table_body_row_num">--</td>
+                    <td class="main_table_body_row_name">
+                        <a href="/product/<%= product.id %>">
+                            <%= product.name %>
+                        </a>
+                    </td>
+                    <td class="main_table_body_row_category">
+                        <%= product.category %>
+                    </td>
+                    <td class="main_table_body_row_price">
+                        <%= product.price %>
+                    </td>
+                </tr>
+                <% } %>
+                    <% } else { %>
+                        <tr class="main_table_body_row">
+                            <td class="no-product"></td>
+                            <td class="no-product">No product found</td>
+                        </tr>
+                        <% } %>
+    </tbody>
+</table>
